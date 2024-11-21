@@ -60,6 +60,13 @@ def quiz(subject, user, quiz_data):
 
 def main():
     print("Welcome to the Quiz Application!")
+     # Load quiz data
+    global quiz_data
+    quiz_data = load_quiz_data()
+
+    if not quiz_data:
+        print("No quiz data available. Exiting the application.")
+        return
     user = None
 
     while not user:
